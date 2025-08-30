@@ -22,6 +22,7 @@ class BrandAd extends StatefulWidget {
   final Color backgroundColor;
   final Color buttonColor;
   final Color buttonTextColor;
+  final double borderRadius;
   final VoidCallback? onClick;
   final VoidCallback? onView;
 
@@ -34,6 +35,7 @@ class BrandAd extends StatefulWidget {
     required this.buttonText,
     this.onClick,
     this.onView,
+    this.borderRadius = 10,
     this.backgroundColor = const Color(0xFFFFF3E0), // default orange.shade50
     this.buttonColor = Colors.deepOrange, // default button color
     this.buttonTextColor = Colors.white, // default text color
@@ -86,7 +88,7 @@ class _BrandAdState extends State<BrandAd> {
         // margin removed
         decoration: BoxDecoration(
           color: widget.backgroundColor,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(widget.borderRadius),
           border: Border.all(color: Colors.orange.shade300, width: 1),
           boxShadow: [
             BoxShadow(
