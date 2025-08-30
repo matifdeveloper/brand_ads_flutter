@@ -2,7 +2,7 @@ name: brand_ads_flutter
 description: "A Flutter library for displaying customizable in-app banner ads with standard IAB sizes and event callbacks."
 homepage: https://github.com/matifdeveloper/brand_ads_flutter
 repository: https://github.com/matifdeveloper/brand_ads_flutter
-version: 0.0.1
+version: 0.0.2
 admob_easy:
   path: ../brand_ads_flutter
 

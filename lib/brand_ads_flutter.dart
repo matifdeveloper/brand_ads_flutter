@@ -21,6 +21,7 @@ class BrandAd extends StatefulWidget {
   final String buttonText;
   final Color backgroundColor;
   final Color buttonColor;
+  final Color buttonTextColor;
   final VoidCallback? onClick;
   final VoidCallback? onView;
 
@@ -35,6 +36,7 @@ class BrandAd extends StatefulWidget {
     this.onView,
     this.backgroundColor = const Color(0xFFFFF3E0), // default orange.shade50
     this.buttonColor = Colors.deepOrange, // default button color
+    this.buttonTextColor = Colors.white, // default text color
   });
 
   @override
@@ -81,7 +83,7 @@ class _BrandAdState extends State<BrandAd> {
       child: Container(
         width: _width,
         height: _height,
-        margin: const EdgeInsets.symmetric(vertical: 8),
+        // margin removed
         decoration: BoxDecoration(
           color: widget.backgroundColor,
           borderRadius: BorderRadius.circular(10),
@@ -141,6 +143,11 @@ class _BrandAdState extends State<BrandAd> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: widget.buttonColor,
+                foregroundColor: widget.buttonTextColor,
+                textStyle: TextStyle(
+                  fontSize: 12,
+                  color: widget.buttonTextColor,
+                ),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 10,
                   vertical: 6,
@@ -151,10 +158,7 @@ class _BrandAdState extends State<BrandAd> {
                 minimumSize: const Size(60, 30),
               ),
               onPressed: widget.onClick,
-              child: Text(
-                widget.buttonText,
-                style: const TextStyle(fontSize: 12),
-              ),
+              child: Text(widget.buttonText),
             ),
           ],
         ),

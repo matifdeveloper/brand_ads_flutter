@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.2
+
+- Removed default margin from `BrandAd` widget
+- Added `buttonTextColor` parameter for customizing CTA button text color
+
 ## 0.0.1
 
 - Initial release 🎉
